@@ -7,6 +7,7 @@ import (
 	"net/http"
 )
 
+//Respond provide service to return personalized error
 func Respond(w http.ResponseWriter, r *http.Request, status int, data interface{}) {
 	var buf bytes.Buffer
 

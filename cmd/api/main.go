@@ -8,8 +8,8 @@ import (
 	"os"
 	"time"
 
-	baseHandler "github.com/alexmourapb/base64api/cmd/api/handlers"
-	baseRouter "github.com/alexmourapb/base64api/cmd/api/routers"
+	apiHandlers "github.com/alexmourapb/base64api/cmd/api/handlers"
+	apiRouters "github.com/alexmourapb/base64api/cmd/api/routers"
 )
 
 func main() {
@@ -31,8 +31,8 @@ func main() {
 	port := "8181"
 
 	fmt.Println("Porta:", port)
-	h := &baseHandler.Handler{}
-	routes := baseRouter.Router(h)
+	h := &apiHandlers.Handler{}
+	routes := apiRouters.Router(h)
 
 	s := &http.Server{
 		Addr:         fmt.Sprintf(":%s", port),
