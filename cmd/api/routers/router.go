@@ -15,5 +15,7 @@ func Router(h *apiHandlers.Handler) *mux.Router {
 	router.HandleFunc("/encode", apiHandlers.HandleEncodeBase64).Methods("POST")
 	router.HandleFunc("/decode", apiHandlers.HandleDecodeBase64).Methods("POST")
 
+	router.HandleFunc("/pwd-random/{pwd_size}", apiHandlers.PwdRadomHandler).Methods("GET")
+
 	return router
 }

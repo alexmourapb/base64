@@ -33,3 +33,7 @@ containing Json in the body with the content to be decoded:
 	"decodeTXT": "dGV4dCBleGFtcGxl"
 }
 
+To Generate password:
+Send a request with the GET method to http://localhost:8181/pwd-random/{pwd_size}
+pwd_size is the password length to generate:
+ex: http://localhost:8181/pwd-random/10
